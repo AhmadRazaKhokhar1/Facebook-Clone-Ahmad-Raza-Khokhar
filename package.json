@@ -9,7 +9,6 @@
     "axios": "^1.6.1",
     "bootstrap": "^5.3.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "latest": "^0.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",
@@ -20,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "dev": "node ./src/server/server.mjs",
+    "start": "node api.js && react-scripts start",
+    "dev": "node api.js && node ./src/server/server.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
