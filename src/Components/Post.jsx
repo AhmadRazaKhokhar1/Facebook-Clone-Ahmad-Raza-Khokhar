@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Comment from './Comment'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -100,10 +100,7 @@ const copyToClipboard = () => {
 
 
 
-// Comment Handler and Local storage  
-const initialComment = JSON.parse(localStorage.getItem(`comment_${index}`)) || [];
-
-const [comment, setComment] = useState(initialComment);
+const [comment, setComment] = useState([]);
 const [desc, setDesc] = useState('');
 
   const addComment = (e) =>{
@@ -113,17 +110,9 @@ const [desc, setDesc] = useState('');
    }
    setComment([...comment, newComment])
    setDesc('')
-   
-    // Save data to local storage
-    localStorage.setItem(`comment_${index}`, JSON.stringify([...comment, newComment])) ;
+  
   }
 
-  useEffect(() => {
-    const savedComment = JSON.parse(localStorage.getItem(`comment_${index}`));
-    if (savedComment) {
-      setComment(savedComment);
-    }
-  }, [index]);
   return (
     <div>
       <br />
