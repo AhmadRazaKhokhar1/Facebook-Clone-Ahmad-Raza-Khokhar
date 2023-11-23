@@ -58,7 +58,7 @@ function soon(){
       <div className="storyPanel">
         <div className="overFloat">
       <div className="storyBar">
-        <img src={ary} alt="Ahmad Raza Khokhar" className="storyMain  xyz" />
+        <img src='https://media.licdn.com/dms/image/D4D03AQEZSriYs_ciXg/profile-displayphoto-shrink_200_200/0/1700489586358?e=1706140800&v=beta&t=HiRKlvN8OHSk6tKiuEy0cBvMi5xNe4Dt4iaDt7OcgVI' alt="Ahmad Raza Khokhar" className="storyMain  xyz" />
         <div className="blockOfStory">
             <img src="../images/addStory.svg" alt="Add Story" className="plus" />
             <h2 className="storyText">
